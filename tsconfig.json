@@ -1,13 +1,30 @@
 {
 	"compilerOptions": {
-		"target": "es5",
-		"module": "commonjs",
-		"lib": ["es2017", "es7", "es6", "dom"],
-		"declaration": true,
-		"rootDir": "./src",
-		"outDir": "./dist",
+		"target": "ES2020",
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"allowJs": true,
 		"strict": true,
-		"esModuleInterop": true
+		"noEmit": false,
+		"declaration": true,
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"exactOptionalPropertyTypes": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"useUnknownInCatchVariables": true,
+		"lib": ["ES2020", "DOM"]
 	},
-	"exclude": ["dist", "node_modules", "**/*.test.ts", "examples"]
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
 }

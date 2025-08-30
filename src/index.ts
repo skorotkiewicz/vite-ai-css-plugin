@@ -110,6 +110,8 @@ export default function AiCssPlugin(config: PluginConfig) {
 			let newCode = code;
 
 			while ((match = regex.exec(code)) !== null) {
+				if (!match[1]) continue; // Skip if no capture group
+
 				const userPrompt = match[1].trim();
 				const fullPrompt = buildPrompt(userPrompt);
 				const cssRegex = /\{["']classes["']\s*:\s*["'][^"']*["']\}/;
@@ -118,13 +120,13 @@ export default function AiCssPlugin(config: PluginConfig) {
 				if (config.active === "ollama") {
 					css = await generateWithOllama(fullPrompt, config.backend.ollama);
 					const cssMatch = css.match(cssRegex);
-					if (cssMatch) {
+					if (cssMatch?.[0]) {
 						css = JSON.parse(cssMatch[0]).classes;
 					}
 				} else if (config.active === "gemini") {
 					css = await generateWithGemini(fullPrompt, config.backend.gemini);
 					const cssMatch = css.match(cssRegex);
-					if (cssMatch) {
+					if (cssMatch?.[0]) {
 						css = JSON.parse(cssMatch[0]).classes;
 					}
 				}

@@ -1,9 +1,10 @@
 {
 	"name": "vite-ai-css-plugin",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Transform natural language descriptions into Tailwind CSS classes with AI magic",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"type": "module",
 	"files": [
 		"dist",
 		"README.md",
