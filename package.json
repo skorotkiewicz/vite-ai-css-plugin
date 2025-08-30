@@ -1,0 +1,44 @@
+{
+	"name": "vite-ai-css-plugin",
+	"version": "0.1.0",
+	"description": "",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"build": "tsc",
+		"prepare": "npm run build",
+		"test": "ts-node test/test.test.ts"
+	},
+	"keywords": [
+		"ollama",
+		"ai",
+		"gemini",
+		"typescript"
+	],
+	"author": "Sebastian Korotkiewicz",
+	"license": "MIT",
+	"dependencies": {},
+	"peerDependencies": {},
+	"devDependencies": {
+		"@biomejs/biome": "^2.2.2",
+		"@types/node": "^24.3.0",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.9.2"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/skorotkiewicz/vite-ai-css-plugin"
+	},
+	"bugs": {
+		"url": "https://github.com/skorotkiewicz/vite-ai-css-plugin/issues"
+	},
+	"homepage": "https://github.com/skorotkiewicz/vite-ai-css-plugin#readme"
+}
