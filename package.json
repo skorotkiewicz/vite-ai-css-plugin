@@ -1,7 +1,7 @@
 {
 	"name": "vite-ai-css-plugin",
 	"version": "0.1.0",
-	"description": "",
+	"description": "Transform natural language descriptions into Tailwind CSS classes with AI magic",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"files": [
@@ -11,19 +11,23 @@
 	],
 	"scripts": {
 		"build": "tsc",
-		"prepare": "npm run build",
-		"test": "ts-node test/test.test.ts"
+		"prepare": "npm run build"
 	},
 	"keywords": [
 		"ollama",
 		"ai",
 		"gemini",
-		"typescript"
+		"typescript",
+		"natural language",
+		"tailwindcss"
 	],
 	"author": "Sebastian Korotkiewicz",
 	"license": "MIT",
 	"dependencies": {},
-	"peerDependencies": {},
+	"peerDependencies": {
+		"@tailwindcss/vite": "^4.1.12",
+		"tailwindcss": "^4.1.12"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.2.2",
 		"@types/node": "^24.3.0",
